@@ -59,6 +59,7 @@ namespace AlgoritmosGrafos
             }
                 return M;
         }
+
         /// <summary>
         /// Verifica se o grafo possui um caminho euleriano
         /// </summary>
@@ -101,7 +102,7 @@ namespace AlgoritmosGrafos
         /// <param name="numvertices">O número de vértices do grafo</param>
         /// <returns></returns>
         public int[,] GetMatrizAdjacencia(string numvertices)
-        {
+        {   
             int vertices = int.Parse(numvertices);
             int[,] M = new int[vertices, vertices];
 
@@ -110,8 +111,8 @@ namespace AlgoritmosGrafos
             {
                 //coluna
                 for (int j = 0; j <= vertices - 1; j++)
-                {
-                    Console.Write("Digite o valor do posição A[" + (i+1) + "," + (j+1) + "]: ");
+                {                       
+                    Console.Write("Digite o valor do posição A[" + (i + 1) + "," + (j + 1) + "]: ");
                     M[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
             }
